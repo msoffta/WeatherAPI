@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+        <link rel="stylesheet" href="src/styles/main.scss" />
+    </head>
+    <body data-theme="dark">
+        <header class="header">
+            <div class="switcher">
+                <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                </label>
+                <b>Dark Mode</b>
+            </div>
+
+            <div class="search query">
+                <label for="city">
+                    <img src="./assets/search.png" alt="" />
+                    <input
+                        type="search"
+                        id="city"
+                        name="city"
+                        placeholder="Search for your preffered city..."
+                    />
+                </label>
+
+                <ul class="search-query"></ul>
+            </div>
+
+            <button class="cur_location">
+                <img src="./assets/location.png" alt="location" />
+                <b>Current Location</b>
+            </button>
+        </header>
+
+        <main>
+            <div class="wrap">
+                <div class="weather">
+                    <div class="widget localtime">
+                        <h1 class="city__name">Athens</h1>
+                        <div class="date">
+                            <span class="time"> 12:00 </span>
+
+                            <div class="day">Thursday, 31 Aug</div>
+                        </div>
+                    </div>
+
+                    <div class="widget temp__now">
+                        <div class="left__side">
+                            <div class="temperature">
+                                <h2 class="temp__main">24°C</h2>
+                                <p class="temp__feels_like">
+                                    Feels like:
+                                    <span class="feels_like">22°C</span>
+                                </p>
+                            </div>
+
+                            <div class="riseset">
+                                <div class="sunrise">
+                                    <img
+                                        src="./assets/sunrise.png"
+                                        alt="sunrise"
+                                    />
+                                    <div class="sunrise__time">
+                                        <h3>Sunrise</h3>
+                                        <p>12:00 AM</p>
+                                    </div>
+                                </div>
+
+                                <div class="sunset">
+                                    <img
+                                        src="./assets/sunset.png"
+                                        alt="sunset"
+                                    />
+                                    <div class="sunset__time">
+                                        <h3>Sunset</h3>
+                                        <p>12:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mid__side">
+                            <img
+                                class="weather__icon"
+                                src="./assets/clear.png"
+                                alt="weather icon"
+                            />
+                            <p class="weather__description">Sunny</p>
+                        </div>
+
+                        <div class="right__side">
+                            <div class="checker humidity">
+                                <div class="humidity__value">
+                                    <img
+                                        src="./assets/humidity.png"
+                                        alt="humidity"
+                                    />
+                                    <p>0%</p>
+                                </div>
+                                <h3>Humidity</h3>
+                            </div>
+
+                            <div class="checker wind__speed">
+                                <div class="wind__value">
+                                    <img src="./assets/wind.png" alt="wind" />
+                                    <p>0 km/h</p>
+                                </div>
+
+                                <h3>Wind Speed</h3>
+                            </div>
+
+                            <div class="checker pressure">
+                                <div class="pressure__value">
+                                    <img
+                                        src="./assets/pressure.png"
+                                        alt="pressure"
+                                    />
+                                    <p>0 hPa</p>
+                                </div>
+                                <h3>Pressure</h3>
+                            </div>
+
+                            <div class="checker uv">
+                                <div class="uv__value">
+                                    <img src="./assets/uv.png" alt="uv" />
+                                    <p>0</p>
+                                </div>
+
+                                <h3>UV Index</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget forecast-5d">
+                        <h2>5 Day Forecast</h2>
+
+                        <div class="forecast-5d__cards">
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                        </div>
+                    </div>
+
+                    <div class="widget forecast-hourly">
+                        <h2>Hourly Forecast:</h2>
+
+                        <div class="forecast-hourly__cards">
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="backdrop"></div>
+        <script type="module" src="./main.js"></script>
+    </body>
+</html>
