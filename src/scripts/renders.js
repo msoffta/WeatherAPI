@@ -77,14 +77,16 @@ export async function fillCity(query, place) {
     if (!city) {
         let li = document.createElement("li");
         let span = document.createElement("span");
-        li.setAttribute("data-city", "not found");
-        span.innerHTML = "Not Found";
+        li.setAttribute("data-city", query);
+        span.innerHTML = query;
         li.append(span);
 
         place.append(li);
 
         li.onclick = async () => {
-            alert("This is not city!!!")
+            renderWeather(await getWeather(query));
+            place.innerHTML = "";
+            backdrop.classList.remove("show");
         };
 
         return
